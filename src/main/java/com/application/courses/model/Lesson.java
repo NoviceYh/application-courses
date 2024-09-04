@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-
 @Getter
 @Setter
 public class Lesson {
@@ -21,7 +20,8 @@ public class Lesson {
     @Column(name = "video_url")
     private String videoUrl;
 
-    private Integer order;
+    @Column(name = "lesson_order")
+    private Integer lessonOrder;
 
     // Muchas lecciones pueden tener un modulo
     @ManyToOne

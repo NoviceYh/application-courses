@@ -1,5 +1,6 @@
 package com.application.courses.model;
 
+import com.application.courses.enums.RoleEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -47,7 +48,8 @@ public class User {
     @Column(name = "delete_date")
     private LocalDateTime deleteDate;
 
-    @Column
-    private Role role;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RoleEnum role;
 
 }

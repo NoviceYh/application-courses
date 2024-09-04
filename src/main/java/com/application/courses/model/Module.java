@@ -17,7 +17,8 @@ public class Module {
 
     private String description;
 
-    private Integer order;
+    @Column(name = "module_order")
+    private Integer moduleOrder;
 
     @ManyToOne
     @JoinColumn(name = "course_id")
