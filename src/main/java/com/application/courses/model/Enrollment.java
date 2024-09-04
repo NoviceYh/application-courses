@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+// Tabla que relaciona los usuarios con los cursos
 @Entity
 @Getter
 @Setter

@@ -25,15 +25,16 @@ public class Course {
     @Column
     private String price;
 
-    @Column
+    @Column(name = "create_date")
     private LocalDateTime createDate;
 
-    @Column
+    @Column(name = "last_update")
     private LocalDateTime lastUpdate;
 
-    @Column
+    @Column(name = "delete_date")
     private LocalDateTime deleteDate;
 
+    // Muchos Cursos pueden tener el mismo instructor
     @ManyToOne
     @JoinColumn(name = "instructor_id")
     private User instructor;

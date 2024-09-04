@@ -16,12 +16,13 @@ public class Grade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal calification;
+    private BigDecimal qualification;
 
     @ManyToOne
     @JoinColumn(name = "enrollment_id")
     private Enrollment enrollment;
 
+    @Column(name = "grade_at")
     private LocalDateTime gradedAt;
 }
 

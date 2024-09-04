@@ -30,7 +30,7 @@ public class User {
     private String username;
 
     @Column
-    private String paswword;
+    private String password;
 
     @Column
     private String dni;
@@ -38,17 +38,16 @@ public class User {
     @Column
     private String email;
 
-    @Column
+    @Column(name = "create_date")
     private LocalDateTime createDate;
 
-    @Column
+    @Column(name = "last_update")
     private LocalDateTime lastUpdate;
 
-    @Column
+    @Column(name = "delete_date")
     private LocalDateTime deleteDate;
 
     @Column
     private Role role;
-
 
 }

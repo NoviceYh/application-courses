@@ -18,10 +18,12 @@ public class Lesson {
 
     private String content;
 
+    @Column(name = "video_url")
     private String videoUrl;
 
     private Integer order;
 
+    // Muchas lecciones pueden tener un modulo
     @ManyToOne
     @JoinColumn(name = "module_id")
     private Module module;
